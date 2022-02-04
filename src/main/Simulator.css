@@ -1,0 +1,11 @@
+.simulator {
+    height: 100%;
+    width: 100%;
+    background-color: #EFEFEF;
+    padding: 40px;
+
+    /* Display */
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 1fr;
+}
