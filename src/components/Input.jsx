@@ -12,15 +12,7 @@ export default function Input(props) {
                 type="text"
                 value={inputValue}
                 onChange={props.change}
-                onChange={(event) => {
-                    const value = event.target.value;
-                    setInputValue(value);
-                    if (isNaN(value)) { /* verifica se o texto do input não é número */
-                        setValid(false)
-                    } else {
-                        setValid(true)
-                    }
-                }}
+                onChange={props.onChange}
             />
             <span className={`warning ${valid ? '' : 'visible'}`}>{`${props.spanWarning}`}</span> {/* verifica se o texto do input é válido, se não for acrescenta a classe visible */}
         </div>
