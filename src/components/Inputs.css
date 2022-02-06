@@ -1,11 +1,17 @@
-.input {
+.columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.input span {
+.column span {
     color: #333;
     margin: 10px 0px;
 }
@@ -20,8 +26,12 @@
     outline: 0;
     border-width: 0 0 2px;
     margin: 10px 0px;
-    margin-bottom: 0px;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
 }
 
 .input.red input{

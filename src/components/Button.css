@@ -22,3 +22,7 @@
 .button:active.orange {
     background-color: #ED8E53cc;
 }
+
+.button:disabled.orange {
+    background-color: #969696;
+}
