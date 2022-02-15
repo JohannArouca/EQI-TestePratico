@@ -1,3 +1,33 @@
+.simulator {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    margin-right: 20px;
+}
+
+.outputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* @media (max-width: 1200px) {
+    .simulator {
+        background-color: red;
+    }
+} */
+
 .columns {
     display: flex;
     align-items: center;
@@ -9,6 +39,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .column span {
@@ -61,8 +92,6 @@
 .option.liquido, .option.fixado {
     border-radius: 0 10px 10px 0;
 }
-
-
 
 .input.red span{
     color: red;
