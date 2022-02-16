@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import BoxResults from './BoxResults'
+import Graph from './Graph'
 import './Results.css'
 
 /* Componente da área de resultados */
@@ -19,6 +20,7 @@ export default function Results(props) {
                 <BoxResults title='Valor Total Investido' value={`R$${props.result[4]}`}/>
                 <BoxResults title='Ganho líquido' green value={`R$${props.result[5]}`}/>
             </div>
+            <Graph graphValues={props.graphValues}/>
         </div>
     )
 }

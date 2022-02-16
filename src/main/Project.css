@@ -4,7 +4,7 @@
     padding: 40px;
 
     /* Display */
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 100px 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

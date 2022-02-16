@@ -27,6 +27,7 @@ export default function Simulator() {
     const [cdi, setCdi] = useState('');
     const [result, setResult] = useState('');
     const [resultControl, setResultControl] = useState(false);
+    const [graphValues, setGraphValues] = useState('');
 
     /* GET para pegar os valores de IPCA e CDI */
     fetch('http://localhost:3000/indicadores')
@@ -65,9 +66,8 @@ export default function Simulator() {
         .then((response) => {
             response.json()
                 .then((data) => {
-                    console.log(data)
                     setResult([data[0].valorFinalBruto, data[0].aliquotaIR, data[0].valorPagoIR, data[0].valorFinalLiquido, data[0].valorTotalInvestido, data[0].ganhoLiquido])
-                    console.log(result)
+                    setGraphValues(data[0].graficoValores)
                     setResultControl(true)
                 })
         })
@@ -247,7 +247,7 @@ export default function Simulator() {
                 </div>
             </div>
             <div className='outputs'>
-                {resultControl ? <Results result={result}/> : ''}
+                {resultControl ? <Results result={result} graphValues={graphValues}/> : ''}
             </div>
         </div>
     )
