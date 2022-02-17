@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Simulador de Investimentos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre
 
-## Available Scripts
+<p>Este projeto foi criado utilizando o React como teste prático para a vaga de Desenvolvedor Fronted na empresa EQI Investimentos. O projeto foi criado seguindo as orientações presentes no repositório do link a seguir: https://github.com/eqi-investimentos/desafio-frontend </p>
+<p>O projeto é um simulador de investimentos, onde o usuário entra com valores de aporte inicial, prazo, aporte mensal e rentabilidade, além de selecionar o rendimento e, ao clicar no botão simular, o sistema retorna o resultado da simulação, contendo os valores de investimento e ganho e um gráfico.</p>
+<p>As informações de IPCA e CDI presentes nos inputs de entrada são resultado de uma requisição para a API já disponibilizada pela empresa, assim como os resultados, que também são retornados a partir de uma requisição enviando o rendimento e o tipo de indexação selecionados pelo usuário.</p>
 
-In the project directory, you can run:
+## Tecnologias
++ React
++ JavaScript
++ HTML
++ CSS
 
-### `npm start`
+## Funcionalidades
+<p>Ao abrir o sistema o usuário irá encontrar a tela presente na imagem a seguir, já com os valores de IPCA e CDI preenchidos, de acordo com a resposta da requisição GET feita ao backend, onde ele deverá selecionar o rendimento e o tipo de indexação e preencher os valores de aporte inicial, prazo, aporte mensal e rentabiliade. Os campos de IPCA e CDI não são editáveis.</p>
+<img alt="homeScreen" title="homeScreen" src="./public/readme/home.png"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>Ao clicar no botão "Limpar campos" todos os campos preenchidos pelo usuários são limpados. A funcionalidade pode ser observada no gif a seguir.</p>
+<img alt="clear" title="clear" src="./public/readme/clear.gif"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p>Caso um dos valores digitados não seja numérico o sistema mostra um aviso dizendo que aquele campo deve ser um número, como na imagem abaixo</p>
+<img alt="warning" title="warning" src="./public/readme/warning.png"/>
 
-### `npm test`
+<p>Com os dados preenchidos corretamente o usuário poderá clicar no botão "Simular" e o resultado aparecerá. Um exemplo é mostrado na imagem abaixo</p>
+<img alt="results" title="results" src="./public/readme/results.png"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Responsividade
+<p>As imagens mostradas anteriormente são do projeto rodando em um desktop, porém é um sistema responsivo e, em dispositivos mobile, aparece como mostrrado a seguir</p>
+<img alt="mobile" title="mobile" src="./public/readme/mobile.gif"/>
 
-### `npm run build`
+## Como executar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Primeiramente é necessário rodar o servidor backend presente no seguinte link: https://github.com/eqi-investimentos/desafio-fake-api
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Faça o clone/download deste repositório e execute `npm install` para instalar as dependências do projeto.
+Depois execute `npm start` e abra [http://localhost:3001](http://localhost:3001) para visualizar o sistema em seu navegador.
