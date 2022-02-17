@@ -14,16 +14,16 @@
 
 ## Funcionalidades
 <p>Ao abrir o sistema o usuário irá encontrar a tela presente na imagem a seguir, já com os valores de IPCA e CDI preenchidos, de acordo com a resposta da requisição GET feita ao backend, onde ele deverá selecionar o rendimento e o tipo de indexação e preencher os valores de aporte inicial, prazo, aporte mensal e rentabiliade. Os campos de IPCA e CDI não são editáveis.</p>
-<img alt="homeScreen" title="homeScreen" src="./public/readme/home.png"/>
+<img alt="homeScreen" title="homeScreen" src="./public/readme/home.PNG"/>
 
 <p>Ao clicar no botão "Limpar campos" todos os campos preenchidos pelo usuários são limpados. A funcionalidade pode ser observada no gif a seguir.</p>
 <img alt="clear" title="clear" src="./public/readme/clear.gif"/>
 
 <p>Caso um dos valores digitados não seja numérico o sistema mostra um aviso dizendo que aquele campo deve ser um número, como na imagem abaixo</p>
-<img alt="warning" title="warning" src="./public/readme/warning.png"/>
+<img alt="warning" title="warning" src="./public/readme/warning.PNG"/>
 
 <p>Com os dados preenchidos corretamente o usuário poderá clicar no botão "Simular" e o resultado aparecerá. Um exemplo é mostrado na imagem abaixo</p>
-<img alt="results" title="results" src="./public/readme/results.png"/>
+<img alt="results" title="results" src="./public/readme/results.PNG"/>
 
 ## Responsividade
 <p>As imagens mostradas anteriormente são do projeto rodando em um desktop, porém é um sistema responsivo e, em dispositivos mobile, aparece como mostrrado a seguir</p>
