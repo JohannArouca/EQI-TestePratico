@@ -1,12 +1,21 @@
 # Simulador de Investimentos
 
+<p align="center">Menu</p>
+<p align="center">
+    <a href="#sobre">Sobre</a> •
+    <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a> •
+    <a href="#funcionalidades">Funcionalidades</a> •
+    <a href="#responsividade">Responsividade</a> •
+    <a href="#como-executar">Como executar</a>
+</p>
+
 ## Sobre
 
 <p>Este projeto foi criado utilizando o React como teste prático para a vaga de Desenvolvedor Fronted na empresa EQI Investimentos, seguindo as orientações presentes no repositório do link: https://github.com/eqi-investimentos/desafio-frontend </p>
 <p>O projeto é um simulador de investimentos, no qual o usuário entra com valores de aporte inicial, prazo, aporte mensal e rentabilidade, além de selecionar o rendimento e o tipo de indexação e, ao clicar no botão simular, o sistema retorna o resultado da simulação, contendo os valores de investimento e ganho e um gráfico.</p>
 <p>As informações de IPCA e CDI presentes nos inputs de entrada são resultado de uma requisição para a API já disponibilizada pela empresa, assim como os resultados que também são retornados a partir de uma requisição enviando o rendimento e o tipo de indexação selecionados pelo usuário.</p>
 
-## Tecnologias
+## Tecnologias utilizadas
 + React
 + JavaScript
 + HTML
