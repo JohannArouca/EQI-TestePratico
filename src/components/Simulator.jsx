@@ -4,9 +4,6 @@ import './Simulator.css'
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import InputMask from "react-input-mask";
-
-import Input from './Input'
 import Button from './Button'
 import Results from './Results';
 
@@ -36,10 +33,10 @@ export default function Simulator() {
                 .then((data) => {
                     for (let i = 0; i < data.length; i++) {
                         if (data[i].nome === 'ipca') {
-                            setIpca(data[i].valor)
+                            setIpca(data[i].valor) /* seta o valor no state usado no input */
                         }
                         if (data[i].nome === 'cdi') {
-                            setCdi(data[i].valor)
+                            setCdi(data[i].valor) /* seta o valor no state usado no input */
                         }
                     }
                 })
@@ -66,9 +63,9 @@ export default function Simulator() {
         .then((response) => {
             response.json()
                 .then((data) => {
-                    setResult([data[0].valorFinalBruto, data[0].aliquotaIR, data[0].valorPagoIR, data[0].valorFinalLiquido, data[0].valorTotalInvestido, data[0].ganhoLiquido])
-                    setGraphValues(data[0].graficoValores)
-                    setResultControl(true)
+                    setResult([data[0].valorFinalBruto, data[0].aliquotaIR, data[0].valorPagoIR, data[0].valorFinalLiquido, data[0].valorTotalInvestido, data[0].ganhoLiquido]) /* valores mandados como props para o componente result */
+                    setGraphValues(data[0].graficoValores) /* valores mandados como props para o result, que manda para o componente graph */
+                    setResultControl(true) /* seta o state como true, tornando os resultados visíveis */
                 })
         })
     }
@@ -77,10 +74,10 @@ export default function Simulator() {
         <div className='simulator'>
             <div className='inputs'>
                 <h2>Simulador</h2>
-                <div className='columns'>
+                <div className='columnsSimulator'>
 
                     {/* Primeira coluna de inputs */}
-                    <div className='column'>
+                    <div className='columnSimulator'>
                         {/* Rendimento */}
                         <div className='input'>
                             <span>Rendimento</span>
@@ -95,23 +92,6 @@ export default function Simulator() {
                                 </span>
                             </div>
                         </div>
-
-
-                        {/* Input do aporte inicial */}
-                        {/* <Input
-                        span='Aporte inicial'
-                        spanWarning='Aporte deve ser um número'
-                        inputValue={aporteInicial}
-                        onChange={(event) => {
-                            const value = event.target.value;
-                            setAporteInicial(value)
-                            if (isNaN(value)) { 
-                                setAporteInicialValid(false)
-                            } else {
-                                setAporteInicialValid(true)
-                            }
-                        }}
-                    /> */}
 
                         {/* Input de aporte inicial */}
                         <div className={`input ${aporteInicialValid ? '' : 'red'}`}> {/* verifica se o texto do input é válido, se não for acrescenta a classe red */}
@@ -161,14 +141,12 @@ export default function Simulator() {
                             />
                         </div>
 
-                        {/* <InputMask mask="R$999.99" /> */}
-
                         {/* Botão limpar campos */}
                         <Button click={clear} label="Limpar campos" />
                     </div>
 
                     {/* Segunda coluna de inputs */}
-                    <div className='column'>
+                    <div className='columnSimulator'>
                         {/* Tipos de indexação */}
                         <div className='input'>
                             <span>Tipos de Indexação</span>

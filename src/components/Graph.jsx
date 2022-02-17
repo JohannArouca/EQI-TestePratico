@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Graph.css'
 
 import Column from '../components/Column'
@@ -10,9 +10,9 @@ export default function Graph(props) {
         <div className='graph'>
             <h3>Projeção de Valores</h3>
             <div className='graphArea'>
-                <div className='row'>
+                <div className='rowGraph'>
                     <span className='axis axisY'>Valor(R$)</span>
-                    <div className='columns'>
+                    <div className='columnsGraph'>
                         <Column month='0' aporte={props.graphValues.comAporte[0]} noAporte={props.graphValues.semAporte[0]}/>
                         <Column month='1' aporte={props.graphValues.comAporte[1]} noAporte={props.graphValues.semAporte[1]}/>
                         <Column month='2' aporte={props.graphValues.comAporte[2]} noAporte={props.graphValues.semAporte[2]}/>

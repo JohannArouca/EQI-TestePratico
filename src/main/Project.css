@@ -2,6 +2,7 @@
     height: 100%;
     background-color: #EFEFEF;
     padding: 40px;
+    overflow: scroll;
 
     /* Display */
     display: flex;
